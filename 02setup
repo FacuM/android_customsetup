@@ -1,0 +1,30 @@
+#!/system/bin/sh
+# Based on Kernel Adiutor's automatic on-boot script generation. #
+echo '0:1209600' > \/sys\/module\/msm_performance\/parameters\/cpu_max_freq
+echo '1:1209600' > \/sys\/module\/msm_performance\/parameters\/cpu_max_freq
+echo '2:1209600' > \/sys\/module\/msm_performance\/parameters\/cpu_max_freq
+echo '3:1209600' > \/sys\/module\/msm_performance\/parameters\/cpu_max_freq
+echo '0:400000' > \/sys\/module\/msm_performance\/parameters\/cpu_min_freq
+echo '1:400000' > \/sys\/module\/msm_performance\/parameters\/cpu_min_freq
+echo '2:400000' > \/sys\/module\/msm_performance\/parameters\/cpu_min_freq
+echo '3:400000' > \/sys\/module\/msm_performance\/parameters\/cpu_min_freq
+echo 'Y' > \/sys\/module\/msm_thermal\/parameters\/enabled
+echo '55' > \/sys\/module\/msm_thermal\/parameters\/temp_threshold
+echo '465000000' > \/sys\/class\/kgsl\/kgsl-3d0\/max_gpuclk
+echo '0' > \/sys\/block\/mmcblk0\/queue\/add_random
+echo '0' > \/sys\/block\/mmcblk0\/queue\/iostats
+echo '4096' > \/sys\/block\/mmcblk0\/queue\/read_ahead_kb
+echo '4096' > \/sys\/block\/mmcblk1\/queue\/read_ahead_kb
+echo '0' > \/sys\/block\/mmcblk1\/queue\/add_random
+echo '0' > \/sys\/block\/mmcblk1\/queue\/iostats
+echo '0' > \/sys\/kernel\/mm\/ksm\/deferred_timer
+echo '0' > \/sys\/kernel\/mm\/ksm\/run
+echo 'fiops' > \/sys\/block\/mmcblk0\/queue\/scheduler
+echo 'fiops' > \/sys\/block\/mmcblk1\/queue\/scheduler
+echo '512' > \/proc\/sys\/kernel\/random\/read_wakeup_threshold
+echo '512' > \/proc\/sys\/kernel\/random\/write_wakeup_threshold
+echo '7 7 4294967281' > \/sys\/kernel\/sound_control_3\/gpl_headphone_gain
+echo '7 7' > \/sys\/kernel\/sound_control_3\/gpl_headphone_gain
+echo '7 7 4294967281' > \/sys\/kernel\/sound_control_3\/gpl_speaker_gain
+echo '7 7' > \/sys\/kernel\/sound_control_3\/gpl_speaker_gain
+echo '7' > \/sys\/devices\/virtual\/misc\/soundcontrol\/speaker_boost
